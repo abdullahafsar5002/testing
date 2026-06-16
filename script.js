@@ -70,40 +70,40 @@ if (document.readyState === 'loading') {
 }
 
 // =============================================
-// 5. SCROLL ANIMATIONS (CLASS-BASED & HOVER-SAFE)
+// 5. SCROLL ANIMATIONS (FIXED VISIBILITY BUG)
 // =============================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.05,
-        rootMargin: '0px 0px -20px 0px'
-    };
+const observerOptions = {
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
+};
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add the CSS class instead of hardcoding inline styles
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Scan all interactive cards safely across the DOM layout
-    document.querySelectorAll('.media-card, .team-card, .testimonial-card, .event-card').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const isAboveFold = rect.top < window.innerHeight && rect.bottom > 0;
-
-        if (isAboveFold || rect.top === 0) {
-            // Instantly display items visible on page load
-            el.classList.add('visible');
-        } else {
-            // Queue up off-screen elements for the scroll observer
-            observer.observe(el);
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // CRITICAL FIX: Remove the hidden inline opacity style completely
+            entry.target.style.removeProperty('opacity');
+            entry.target.style.animation = 'slideInUp 0.6s ease forwards';
+            observer.unobserve(entry.target);
         }
     });
-});
+}, observerOptions);
 
+// Smart Scroll Initialization
+document.querySelectorAll('.media-card, .team-card, .testimonial-card, .event-card').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const isAboveFold = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isAboveFold || rect.top === 0) {
+        // If the card is already visible on load, keep it visible and animate cleanly
+        el.style.removeProperty('opacity');
+        el.style.animation = 'slideInUp 0.6s ease forwards';
+    } else {
+        // If it's below the fold, hide it temporarily until scrolled into view
+        el.style.opacity = '0';
+        observer.observe(el);
+    }
+});
 
 // =============================================
 // 6. NEWSLETTER SIGNUP
