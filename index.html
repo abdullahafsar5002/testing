@@ -4,12 +4,13 @@
     <title>Toruk Makto - Pakistan's 1st Golf League</title>
     
     <!-- This line adds your logo to the browser tab -->
-    <link rel="icon" type="image/png" href="logo toruk.png">
+    <link rel="icon" type="image/jpeg" href="logo toruk.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <div class="container navbar">
             <div class="brand-wrapper">
@@ -29,44 +30,44 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
+   <section class="hero" style="min-height: calc(100vh - 80px); display: flex; align-items: center;">
+        <!-- Background Video Implementation -->
+        <video autoplay loop muted playsinline class="hero-bg-video">
             <source src="a.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="hero-overlay"></div>
+
         <div class="container hero-content">
-            <h1 class="hero-title">PAKISTAN'S 1ST GOLF LEAGUE</h1>
-            <p class="hero-subtitle">Bridging premium corporate excellence with top-tier professional golfing talent across Pakistan's legendary fairways.</p>
-            <div class="hero-badge">Official Venue Partners: Airmen Golf Club & DAC&GC</div>
-            <br><br><br>
-            <br><br><br>
-            <div class="scroll-indicator">
-                <span>SCROLL</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
+            <img src="logo toruk.png" alt="Toruk Makto Platinum Logo" class="hero-logo-img">
+            <h1>PAKISTAN'S 1ST GOLF LEAGUE</h1>
+            <p>Bridging premium corporate excellence with top-tier professional golfing talent across Pakistan's legendary fairways.</p>
+            <div class="hero-venues">Official Venue Partners: Airmen Golf Club & DAC&GC</div>
+            <div class="hero-cta">
+                <a href="contact.html" class="cta-button primary">Register Your Team</a>
+                <a href="schedule.html" class="cta-button secondary">View Schedule</a>
             </div>
         </div>
     </section>
+
     <!-- Stats/Counter Section -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-number" data-count="150">150</div>
                     <div class="stat-label">Players</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-number" data-count="6">6</div>
                     <div class="stat-label">Teams</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-number" data-count="3">3</div>
                     <div class="stat-label">Venues</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-count="2">0</div>
-                    <div class="stat-label">Tournament</div>
+                    <div class="stat-number" data-count="2">2</div>
+                    <div class="stat-label">Tournaments</div>
                 </div>
             </div>
         </div>
@@ -77,17 +78,17 @@
         <div class="container">
             <h2 class="section-title">What Teams Say</h2>
             <div class="testimonials-grid">
-                <div>
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p>"An exceptional platform bringing premium golf excellence to Pakistan. Outstanding organization!"</p>
                     <div class="testimonial-author">— Team Captain, Markhor Warriors</div>
                 </div>
-                <div>
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p>"Professional setup, well-run tournaments, and incredible networking opportunities for our corporate team."</p>
                     <div class="testimonial-author">— Sponsor Representative, Braun</div>
                 </div>
-                <div>
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p>"The league has set new standards for corporate golf in Pakistan. Highly recommended!"</p>
                     <div class="testimonial-author">— Media Partner, Dawn News</div>
