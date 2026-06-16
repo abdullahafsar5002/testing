@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
+     <header>
         <div class="container navbar">
             <div class="brand-wrapper">
                 <img src="logo toruk.png" alt="Toruk Makto Logo" class="nav-logo-img">
@@ -21,7 +20,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="leadership.html">Leadership</a></li>
-                <li><a href="teams.html">Teams</a></li>
+                <li><a href="teams.html" class="active">Teams</a></li>
                 <li><a href="standings.html">Standings</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="gallery.html">Photo Gallery</a></li>
@@ -29,6 +28,7 @@
             </ul>
         </div>
     </header>
+    
     <div class="breadcrumb">
         <div class="container">
             <a href="index.html">Home</a> / Franchises & Teams
@@ -40,287 +40,264 @@
             <h2 class="section-title">Official League Franchises</h2>
 
             <!-- =============================================
-     TORUK MAKTO GOLF LEAGUE - TEAMS REGISTRY
-     ============================================= -->
-<section class="teams-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>League Teams & Historical Analytics</h2>
-            <p>Official roster configurations alongside archived tournament scorecards from Defence Authority Country & Golf Club.</p>
-        </div>
-
-        <div class="teams-grid">
-
-            <!-- 1. MARKHORS / MARKHOR WARRIORS -->
-            <div class="team-card" data-team="markhors">
-                <div class="team-banner">
-                    <div class="team-overlay">
-                        <h3>Markhors</h3>
-                        <span class="leadership-badge">Captain: Col Masood</span>
+                 TORUK MAKTO GOLF LEAGUE - TEAMS REGISTRY
+                 ============================================= -->
+            <section class="teams-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <p style="color: var(--text-light); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                            Official roster configurations alongside archived tournament scorecards from Defence Authority Country & Golf Club[cite: 6].
+                        </p>
                     </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">Markhors Logistics</span>
-                    </div>
-                    
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Hamza Ghani</td><td>68</td><td>3</td><td>65</td></tr>
-                                    <tr><td>Maj Irfan</td><td>73</td><td>6</td><td>67</td></tr>
-                                    <tr><td>Umer Khalid</td><td>71</td><td>1</td><td>70</td></tr>
-                                    <tr><td>Saud Irfan</td><td>79</td><td>8</td><td>71</td></tr>
-                                    <tr><td>Omar Intesar</td><td>79</td><td>5</td><td>74</td></tr>
-                                    <tr><td>Jameel Uddin Khan</td><td>83</td><td>9</td><td>74</td></tr>
-                                    <tr><td>M. Qasim</td><td>80</td><td>5</td><td>75</td></tr>
-                                    <tr><td>Nadeem Iftikhar</td><td>81</td><td>5</td><td>76</td></tr>
-                                    <tr><td>Col Masood</td><td>90</td><td>14</td><td>76</td></tr>
-                                    <tr><td>Afnan Shehzad</td><td>86</td><td>9</td><td>77</td></tr>
-                                    <tr><td>Cdre Abdul Rehman</td><td>91</td><td>10</td><td>81</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary">
-                                <span><strong>Gross:</strong> 291</span>
-                                <span><strong>Net:</strong> 273</span>
-                                <span class="highlight"><strong>Score:</strong> 564</span>
+
+                    <div class="teams-grid">
+
+                        <!-- 1. MARKHORS / MARKHOR WARRIORS -->
+                        <div class="team-card" data-team="markhors">
+                            <div class="team-header">
+                                <h3>Markhors</h3>
+                                <div class="team-meta">Captain: <strong>Col Masood</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">Markhors Logistics[cite: 6]</p>
+                                
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Hamza Ghani</td><td>68</td><td>3</td><td>65</td></tr>
+                                                <tr><td>Maj Irfan</td><td>73</td><td>6</td><td>67</td></tr>
+                                                <tr><td>Umer Khalid</td><td>71</td><td>1</td><td>70</td></tr>
+                                                <tr><td>Saud Irfan</td><td>79</td><td>8</td><td>71</td></tr>
+                                                <tr><td>Omar Intesar</td><td>79</td><td>5</td><td>74</td></tr>
+                                                <tr><td>Jameel Uddin Khan</td><td>83</td><td>9</td><td>74</td></tr>
+                                                <tr><td>M. Qasim</td><td>80</td><td>5</td><td>75</td></tr>
+                                                <tr><td>Nadeem Iftikhar</td><td>81</td><td>5</td><td>76</td></tr>
+                                                <tr><td>Col Masood</td><td>90</td><td>14</td><td>76</td></tr>
+                                                <tr><td>Afnan Shehzad</td><td>86</td><td>9</td><td>77</td></tr>
+                                                <tr><td>Cdre Abdul Rehman</td><td>91</td><td>10</td><td>81</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span><strong>Gross:</strong> 291</span>
+                                            <span><strong>Net:</strong> 273</span>
+                                            <span class="highlight"><strong>Score:</strong> 564</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 2. KARACHI LIONS -->
-            <div class="team-card" data-team="karachi-lions">
-                <div class="team-banner">
-                    <div class="team-overlay">
-                        <h3>Karachi Lions</h3>
-                        <span class="leadership-badge">Captain: Arsalan Shikoh</span>
-                    </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">DAWN NEWS</span>
-                    </div>
+                        <!-- 2. KARACHI LIONS -->
+                        <div class="team-card" data-team="karachi-lions">
+                            <div class="team-header">
+                                <h3>Karachi Lions</h3>
+                                <div class="team-meta">Captain: <strong>Arsalan Shikoh</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">DAWN NEWS[cite: 6]</p>
 
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Yashal Shah</td><td>72</td><td>2</td><td>70</td></tr>
-                                    <tr><td>Sameer Sayed</td><td>75</td><td>5</td><td>70</td></tr>
-                                    <tr><td>Saim Shazli</td><td>73</td><td>2</td><td>71</td></tr>
-                                    <tr><td>Abdullah Nasir</td><td>76</td><td>5</td><td>71</td></tr>
-                                    <tr><td>Nasrullah Sheikh</td><td>80</td><td>9</td><td>71</td></tr>
-                                    <tr><td>Omar Shikoh</td><td>75</td><td>3</td><td>72</td></tr>
-                                    <tr><td>Arsalan Shikoh</td><td>76</td><td>2</td><td>74</td></tr>
-                                    <tr><td>Zunair Khan</td><td>80</td><td>6</td><td>74</td></tr>
-                                    <tr><td>Arsalan Mughal</td><td>83</td><td>9</td><td>74</td></tr>
-                                    <tr><td>Azhar Hameed</td><td>83</td><td>9</td><td>74</td></tr>
-                                    <tr><td>Hamza Shikoh</td><td>82</td><td>3</td><td>79</td></tr>
-                                    <tr><td>Sameer Feroz</td><td>89</td><td>6</td><td>83</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary">
-                                <span><strong>Gross:</strong> 295</span>
-                                <span><strong>Net:</strong> 282</span>
-                                <span class="highlight"><strong>Score:</strong> 577</span>
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Yashal Shah</td><td>72</td><td>2</td><td>70</td></tr>
+                                                <tr><td>Sameer Sayed</td><td>75</td><td>5</td><td>70</td></tr>
+                                                <tr><td>Saim Shazli</td><td>73</td><td>2</td><td>71</td></tr>
+                                                <tr><td>Abdullah Nasir</td><td>76</td><td>5</td><td>71</td></tr>
+                                                <tr><td>Nasrullah Sheikh</td><td>80</td><td>9</td><td>71</td></tr>
+                                                <tr><td>Omar Shikoh</td><td>75</td><td>3</td><td>72</td></tr>
+                                                <tr><td>Arsalan Shikoh</td><td>76</td><td>2</td><td>74</td></tr>
+                                                <tr><td>Zunair Khan</td><td>80</td><td>6</td><td>74</td></tr>
+                                                <tr><td>Arsalan Mughal</td><td>83</td><td>9</td><td>74</td></tr>
+                                                <tr><td>Azhar Hameed</td><td>83</td><td>9</td><td>74</td></tr>
+                                                <tr><td>Hamza Shikoh</td><td>82</td><td>3</td><td>79</td></tr>
+                                                <tr><td>Sameer Feroz</td><td>89</td><td>6</td><td>83</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span><strong>Gross:</strong> 295</span>
+                                            <span><strong>Net:</strong> 282</span>
+                                            <span class="highlight"><strong>Score:</strong> 577</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 3. NOCTURNAL BATS -->
-            <div class="team-card" data-team="nocturnal-bats">
-                <div class="team-banner">
-                    <div class="team-overlay">
-                        <h3>Nocturnal Bats</h3>
-                        <span class="leadership-badge">Captain: Irfan Ali</span>
-                    </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">Braun</span>
-                    </div>
+                        <!-- 3. NOCTURNAL BATS -->
+                        <div class="team-card" data-team="nocturnal-bats">
+                            <div class="team-header">
+                                <h3>Nocturnal Bats</h3>
+                                <div class="team-meta">Captain: <strong>Irfan Ali</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">Braun[cite: 6]</p>
 
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Lt Cdr Naeem Mirza</td><td>80</td><td>16</td><td>64</td></tr>
-                                    <tr><td>Musab Asif</td><td>88</td><td>20</td><td>68</td></tr>
-                                    <tr><td>Irfan Ali</td><td>88</td><td>18</td><td>70</td></tr>
-                                    <tr><td>Hayder Bilal</td><td>83</td><td>12</td><td>71</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary text-muted">
-                                <span>Partial Roster Logged</span>
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Lt Cdr Naeem Mirza</td><td>80</td><td>16</td><td>64</td></tr>
+                                                <tr><td>Musab Asif</td><td>88</td><td>20</td><td>68</td></tr>
+                                                <tr><td>Irfan Ali</td><td>88</td><td>18</td><td>70</td></tr>
+                                                <tr><td>Hayder Bilal</td><td>83</td><td>12</td><td>71</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span style="color: #64748b; font-style: italic;">Partial Roster Logged[cite: 6]</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 4. GREY WOLF -->
-            <div class="team-card" data-team="grey-wolf">
-                <div class="team-banner">
-                    <div class="team-overlay">
-                        <h3>Grey Wolf</h3>
-                        <span class="leadership-badge">Captain: Ather Abbas</span>
-                    </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">tsm&co.</span>
-                    </div>
+                        <!-- 4. GREY WOLF -->
+                        <div class="team-card" data-team="grey-wolf">
+                            <div class="team-header">
+                                <h3>Grey Wolf</h3>
+                                <div class="team-meta">Captain: <strong>Athar Abbas</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">tsm&co.[cite: 6]</p>
 
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Brig Abid Rao</td><td>87</td><td>14</td><td>73</td></tr>
-                                    <tr><td>Athar Abbas</td><td>91</td><td>18</td><td>73</td></tr>
-                                    <tr><td>Amjad Saeed</td><td>91</td><td>18</td><td>73</td></tr>
-                                    <tr><td>ASHASS</td><td>82</td><td>7</td><td>75</td></tr>
-                                    <tr><td>Capt Ansar Mehmood</td><td>81</td><td>4</td><td>77</td></tr>
-                                    <tr><td>Kamran Shehzad</td><td>96</td><td>18</td><td>78</td></tr>
-                                    <tr><td>Abdullah Ansar</td><td>84</td><td>4</td><td>80</td></tr>
-                                    <tr><td>Aman Aftab</td><td>92</td><td>12</td><td>80</td></tr>
-                                    <tr><td>Col Munawar Ahmed</td><td>95</td><td>14</td><td>81</td></tr>
-                                    <tr><td>Abdul Wahab</td><td>101</td><td>18</td><td>83</td></tr>
-                                    <tr><td>Abrar Asif</td><td>105</td><td>16</td><td>89</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary">
-                                <span><strong>Gross:</strong> 330</span>
-                                <span><strong>Net:</strong> 285</span>
-                                <span class="highlight"><strong>Score:</strong> 615</span>
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Brig Abid Rao</td><td>87</td><td>14</td><td>73</td></tr>
+                                                <tr><td>Athar Abbas</td><td>91</td><td>18</td><td>73</td></tr>
+                                                <tr><td>Amjad Saeed</td><td>91</td><td>18</td><td>73</td></tr>
+                                                <tr><td>ASHASS</td><td>82</td><td>7</td><td>75</td></tr>
+                                                <tr><td>Capt Ansar Mehmood</td><td>81</td><td>4</td><td>77</td></tr>
+                                                <tr><td>Kamran Shehzad</td><td>96</td><td>18</td><td>78</td></tr>
+                                                <tr><td>Abdullah Ansar</td><td>84</td><td>4</td><td>80</td></tr>
+                                                <tr><td>Aman Aftab</td><td>92</td><td>12</td><td>80</td></tr>
+                                                <tr><td>Col Munawar Ahmed</td><td>95</td><td>14</td><td>81</td></tr>
+                                                <tr><td>Abdul Wahab</td><td>101</td><td>18</td><td>83</td></tr>
+                                                <tr><td>Abrar Asif</td><td>105</td><td>16</td><td>89</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span><strong>Gross:</strong> 330</span>
+                                            <span><strong>Net:</strong> 285</span>
+                                            <span class="highlight"><strong>Score:</strong> 615</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 5. SNOW LEOPARDS -->
-            <div class="team-card" data-team="snow-leopard">
-                <div class="team-banner">           
-                    <div class="team-overlay">
-                        <h3>Snow Leopards</h3>
-                        <span class="leadership-badge">Owner/Captain: Sir Asad I Khan</span>
-                    </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">United Marine Agencies (UMA)</span>
-                    </div>
+                        <!-- 5. SNOW LEOPARDS -->
+                        <div class="team-card" data-team="snow-leopard">
+                            <div class="team-header">
+                                <h3>Snow Leopards</h3>
+                                <div class="team-meta">Owner/Captain: <strong>Sir Asad I Khan</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">United Marine Agencies (UMA)[cite: 6]</p>
 
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Dr Waqas Burki</td><td>76</td><td>5</td><td>71</td></tr>
-                                    <tr><td>Shahid Azim Khan</td><td>78</td><td>7</td><td>71</td></tr>
-                                    <tr><td>Asad I A Khan</td><td>81</td><td>5</td><td>76</td></tr>
-                                    <tr><td>Salman Achmed</td><td>82</td><td>9</td><td>73</td></tr>
-                                    <tr><td>Cdre Ghazanfar Abbas</td><td>82</td><td>8</td><td>74</td></tr>
-                                    <tr><td>Imran Khawja</td><td>83</td><td>10</td><td>73</td></tr>
-                                    <tr><td>Zahid Azim Khan</td><td>85</td><td>9</td><td>76</td></tr>
-                                    <tr><td>Noman Haider</td><td>86</td><td>7</td><td>79</td></tr>
-                                    <tr><td>Yousuf Kadeer</td><td>88</td><td>9</td><td>79</td></tr>
-                                    <tr><td>RAZA RASHID</td><td>89</td><td>15</td><td>74</td></tr>
-                                    <tr><td>Tariq Bin Aijaz</td><td>90</td><td>14</td><td>76</td></tr>
-                                    <tr><td>Khurram Iqbal Khan</td><td>92</td><td>13</td><td>79</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary">
-                                <span><strong>Gross:</strong> 317</span>
-                                <span><strong>Net:</strong> 288</span>
-                                <span class="highlight"><strong>Score:</strong> 605</span>
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Dr Waqas Burki</td><td>76</td><td>5</td><td>71</td></tr>
+                                                <tr><td>Shahid Azim Khan</td><td>78</td><td>7</td><td>71</td></tr>
+                                                <tr><td>Asad I A Khan</td><td>81</td><td>5</td><td>76</td></tr>
+                                                <tr><td>Salman Achmed</td><td>82</td><td>9</td><td>73</td></tr>
+                                                <tr><td>Cdre Ghazanfar Abbas</td><td>82</td><td>8</td><td>74</td></tr>
+                                                <tr><td>Imran Khawja</td><td>83</td><td>10</td><td>73</td></tr>
+                                                <tr><td>Zahid Azim Khan</td><td>85</td><td>9</td><td>76</td></tr>
+                                                <tr><td>Noman Haider</td><td>86</td><td>7</td><td>79</td></tr>
+                                                <tr><td>Yousuf Kadeer</td><td>88</td><td>9</td><td>79</td></tr>
+                                                <tr><td>RAZA RASHID</td><td>89</td><td>15</td><td>74</td></tr>
+                                                <tr><td>Tariq Bin Aijaz</td><td>90</td><td>14</td><td>76</td></tr>
+                                                <tr><td>Khurram Iqbal Khan</td><td>92</td><td>13</td><td>79</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span><strong>Gross:</strong> 317</span>
+                                            <span><strong>Net:</strong> 288</span>
+                                            <span class="highlight"><strong>Score:</strong> 605</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 6. VIPER COMBAT GP -->
-            <div class="team-card" data-team="viper-combat">
-                <div class="team-banner">
-                    <div class="team-overlay">
-                        <h3>Viper Combat GP</h3>
-                        <span class="leadership-badge">Captain: Brig Tabassum Pervez (R)</span>
-                    </div>
-                </div>
-                <div class="team-body">
-                    <div class="sponsor-info">
-                        <span class="label">Official Sponsor:</span>
-                        <span class="value">MARINE GROUP</span>
-                    </div>
+                        <!-- 6. VIPER COMBAT GP -->
+                        <div class="team-card" data-team="viper-combat">
+                            <div class="team-header">
+                                <h3>Viper Combat GP</h3>
+                                <div class="team-meta">Captain: <strong>Brig Tabassum Pervez (R)</strong>[cite: 6]</div>
+                            </div>
+                            <div class="team-body">
+                                <div class="roster-title">Official Sponsor</div>
+                                <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">MARINE GROUP[cite: 6]</p>
 
-                    <div class="stats-toggle-block">
-                        <h4>Tournament Scorecard (23rd Oct 2021)</h4>
-                        <div class="scorecard-wrapper">
-                            <table class="scorecard-table">
-                                <thead>
-                                    <th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Gp Capt Aftab A Khan</td><td>80</td><td>15</td><td>65</td></tr>
-                                    <tr><td>Brig Qasim Changazi</td><td>80</td><td>8</td><td>72</td></tr>
-                                    <tr><td>Sqn Ldr Aamir</td><td>82</td><td>10</td><td>72</td></tr>
-                                    <tr><td>brig ali haider kazmi</td><td>84</td><td>12</td><td>72</td></tr>
-                                    <tr><td>Bilal Nasim</td><td>80</td><td>5</td><td>75</td></tr>
-                                    <tr><td>WASEEM UL GHANI</td><td>85</td><td>10</td><td>75</td></tr>
-                                    <tr><td>Lt Col Khadim Hussain</td><td>85</td><td>10</td><td>75</td></tr>
-                                    <tr><td>Adnan Javed Lodhi</td><td>87</td><td>10</td><td>77</td></tr>
-                                    <tr><td>Brig Zubair</td><td>90</td><td>10</td><td>80</td></tr>
-                                    <tr><td>Brig Tabassum Pervez</td><td>94</td><td>14</td><td>80</td></tr>
-                                    <tr><td>Brig Farhan Akbar Khan</td><td>93</td><td>11</td><td>82</td></tr>
-                                    <tr><td>Brig Junaid</td><td>94</td><td>12</td><td>82</td></tr>
-                                </tbody>
-                            </table>
-                            <div class="team-totals-summary">
-                                <span><strong>Gross:</strong> 322</span>
-                                <span><strong>Net:</strong> 281</span>
-                                <span class="highlight"><strong>Score:</strong> 603</span>
+                                <div class="stats-toggle-block">
+                                    <h4>Tournament Scorecard (23rd Oct 2021)[cite: 6]</h4>
+                                    <div class="scorecard-wrapper">
+                                        <table class="scorecard-table">
+                                            <thead>
+                                                <tr><th>Player Name</th><th>Gross</th><th>H/C</th><th>Net</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Gp Capt Aftab A Khan</td><td>80</td><td>15</td><td>65</td></tr>
+                                                <tr><td>Brig Qasim Changazi</td><td>80</td><td>8</td><td>72</td></tr>
+                                                <tr><td>Sqn Ldr Aamir</td><td>82</td><td>10</td><td>72</td></tr>
+                                                <tr><td>brig ali haider kazmi</td><td>84</td><td>12</td><td>72</td></tr>
+                                                <tr><td>Bilal Nasim</td><td>80</td><td>5</td><td>75</td></tr>
+                                                <tr><td>WASEEM UL GHANI</td><td>85</td><td>10</td><td>75</td></tr>
+                                                <tr><td>Lt Col Khadim Hussain</td><td>85</td><td>10</td><td>75</td></tr>
+                                                <tr><td>Adnan Javed Lodhi</td><td>87</td><td>10</td><td>77</td></tr>
+                                                <tr><td>Brig Zubair</td><td>90</td><td>10</td><td>80</td></tr>
+                                                <tr><td>Brig Tabassum Pervez</td><td>94</td><td>14</td><td>80</td></tr>
+                                                <tr><td>Brig Farhan Akbar Khan</td><td>93</td><td>11</td><td>82</td></tr>
+                                                <tr><td>Brig Junaid</td><td>94</td><td>12</td><td>82</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="team-totals-summary">
+                                            <span><strong>Gross:</strong> 322</span>
+                                            <span><strong>Net:</strong> 281</span>
+                                            <span class="highlight"><strong>Score:</strong> 603</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+            </section>
 
             <div class="other-teams">
-                <div class="roster-title" style="margin-bottom:0.5rem;">Additional Competing League Franchises</div>
+                <div class="roster-title" style="margin-bottom:0.5rem;">Additional Competing League Franchises[cite: 6]</div>
                 <span>Black Tiger</span>
                 <span>Sky Hawk</span>
                 <span>Desert Fox</span>
@@ -332,29 +309,29 @@
         <div class="container footer-content">
             <div class="footer-col">
                 <h4>Toruk Makto Golf League</h4>
-                <p>The premier commercial structural framework developing competitive corporate golf environments across Pakistan.</p>
+                <p>The premier commercial structural framework developing competitive corporate golf environments across Pakistan[cite: 6].</p>
             </div>
             <div class="footer-col">
                 <h4>Secretarial Headquarters</h4>
-                <p>Karachi Office Space,<br>Sindh, Pakistan.</p>
+                <p>Karachi Office Space,<br>Sindh, Pakistan[cite: 6].</p>
             </div>
             <div class="footer-col">
                 <h4>Digital Hub</h4>
                 <p>Explore resources, live sheets, and tournament archives online at:</p>
-                <p style="margin-top: 0.5rem;"><a href="http://www.torukmaktoleague.com/" style="color: var(--accent-color); font-weight:600;">www.torukmaktoleague.com</a></p>
+                <p style="margin-top: 0.5rem;"><a href="http://www.torukmaktoleague.com/" style="color: var(--accent-color); font-weight:600;">www.torukmaktoleague.com</a>[cite: 6]</p>
             </div>
             <div class="footer-col">
                 <h4>Connect With Us</h4>
                 <p>Stay updated with our official live tournament coverage & media announcements:</p>
                 <div class="social-links-wrapper">
-                    <a href="https://www.facebook.com/TorukMaktoGolfLeague/" class="social-btn" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/torukmaktoleague" class="social-btn" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/TorukMaktoGolfLeague/" class="social-btn" target="_blank">Facebook</a>[cite: 6]
+                    <a href="https://www.instagram.com/torukmaktoleague" class="social-btn" target="_blank">Instagram</a>[cite: 6]
                 </div>
             </div>   
         </div>
         <div class="footer-bottom">
-            <p class="footer-credit">Designed & Built by Abdullah Afsar</p>
-            <p>&copy; 2026 Toruk Makto Pakistan's First Golf League. All Rights Reserved.</p>
+            <p class="footer-credit">Designed & Built by Abdullah Afsar[cite: 6]</p>
+            <p>&copy; 2026 Toruk Makto Pakistan's First Golf League. All Rights Reserved[cite: 6].</p>
         </div>
     </footer>
 
