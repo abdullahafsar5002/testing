@@ -129,16 +129,18 @@ header {
 }
 
 /* ==========================================
-   3. HERO SHOWCASE AREA (UPDATED)
+   3. HERO SHOWCASE AREA (WITH VIDEO BG)
    ========================================== */
 .hero {
     position: relative;
+    color: var(--white);
     padding: clamp(5rem, 12vw, 8rem) 0;
     text-align: center;
     overflow: hidden;
-    background: #0c4b31; /* Fallback flat color if video fails to load */
+    background: #0c4b31; /* Instant dark emerald fallback color */
 }
 
+/* Force video to fill the space perfectly without distorting aspect ratios */
 .hero-bg-video {
     position: absolute;
     top: 50%;
@@ -149,11 +151,28 @@ header {
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    z-index: 1;
-    pointer-events: none; /* Prevents clicks or highlight selections from catching on video track */
+    z-index: 0;
+    pointer-events: none; /* Stops mouse clicks or highlight selections from catching on the video track */
 }
 
-/* Subtle dark gradient mask overlay to guarantee maximum text readability */
+/* High-end cinematic color tint to keep all text razor-sharp and legible */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(12, 75, 49, 0.82) 0%, rgba(17, 17, 17, 0.9) 100%);
+    z-index: 1;
+}
+
+/* Lift the text and logos above the background layers */
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Retain your golden radial accent lighting ring */
 .hero::before {
     content: '';
     position: absolute;
@@ -161,61 +180,12 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(12, 75, 49, 0.85) 0%, rgba(11, 11, 11, 0.9) 100%);
-    z-index: 2;
+    background: radial-gradient(circle at center, rgba(184, 151, 66, 0.15) 0%, transparent 70%);
     pointer-events: none;
+    z-index: 2;
 }
 
-/* Forces text content container above the absolute layout layer stacking context */
-.hero-content {
-    position: relative;
-    z-index: 3;
-}
 
-.hero-logo-img {
-    height: clamp(80px, 15vw, 120px);
-    width: auto;
-    border-radius: 50%;
-    border: 3px solid var(--accent-color);
-    background-color: var(--white);
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.hero h1 {
-    font-size: clamp(2rem, 5.5vw, 3.5rem);
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    letter-spacing: 2px;
-    line-height: 1.15;
-    padding: 0 0.5rem;
-    text-shadow: 0 4px 20px rgba(245, 237, 237, 0.6);
-    color: white;
-}
-
-.hero p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    color: #cbd5e1;
-    margin-bottom: 2.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero-venues {
-    display: inline-block;
-    background-color: var(--accent-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    border: 1px solid var(--accent-color);
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    backdrop-filter: blur(4px);
-    max-width: 90%;
-}
 /* ==========================================
    4. GLOBAL LAYOUT SECTIONS
    ========================================== */
@@ -385,7 +355,7 @@ header {
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+    overflow: scroll;
     border: 1px solid rgba(184, 151, 66, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -421,7 +391,7 @@ header {
 }
 
 .team-body {
-    padding: 1.5rem;
+    padding: scroll;
 }
 
 .roster-title {
@@ -444,7 +414,7 @@ header {
 .roster-list li {
     padding: 0.4rem 0;
     border-bottom: 1px dashed var(--border-color);
-    display: flex;
+    display: fit;
     justify-content: space-between;
     padding-right: 0.5rem;
 }
@@ -515,11 +485,10 @@ th {
 
 td {
     padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: fit solid var(--border-color);
 }
 
 tr:last-child td { border-bottom: none; }
-tr:nth-child(even) { background-color: #f8fafc; }
 
 .highlight-row {
     font-weight: 700;
@@ -993,7 +962,6 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
 /* Breadcrumb */
 .breadcrumb {
     background: linear-gradient(135deg, rgba(12, 75, 49, 0.08), rgba(184, 151, 66, 0.05));
@@ -1718,15 +1686,15 @@ footer {
 
 .roster-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0.5rem;
+    margin: 1px;
 }
 
 .roster-list li {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px dashed #e2e8f0;
+    padding: 8px ;
+    border-bottom: 1px;
     font-size: 0.95rem;
     color: #334155;
 }
@@ -1776,14 +1744,14 @@ footer {
 
 .scorecard-wrapper {
     background: #090909;
-    border: 1px solid #1a1a1a;
+    border: 0px solid #1a1a1a;
     border-radius: 6px;
-    padding: 0.5rem;
+    padding: 0rem;
 }
 
 .scorecard-table {
     width: 100%;
-    border-collapse: collapse;
+    border-radius: 2px;
     font-size: 0.8rem;
     text-align: left;
 }
@@ -1792,18 +1760,19 @@ footer {
     color: #555;
     font-weight: 600;
     padding: 0.4rem;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom:  solid #1a1a1a;
     text-transform: uppercase;
 }
 
 .scorecard-table td {
     padding: 0.4rem;
     color: #bbb;
-    border-bottom: 1px dashed #111;
+    border-bottom: none;
 }
 
-.scorecard-table tr:last-child td {
-    border-bottom: none;
+.scorecard-table tr:last-child td {border-radius:6px;
+   margin: 10px;
+   padding: px;
 }
 
 .team-totals-summary {
@@ -1830,4 +1799,248 @@ footer {
     margin-top: 0.5rem;
     text-align: right;
     font-family: monospace;
+}
+/* ==========================================
+   8. HARDWARE-ACCELERATED SCROLL ANIMATIONS
+   ========================================== */
+
+/* Base hidden state for scrollable items */
+.media-card, .team-card, .testimonial-card, .event-card {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: opacity, transform;
+    /* Combines scroll transition smoothness with your hover transitions */
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s ease;
+}
+
+/* Active visible state triggered by JavaScript */
+.media-card.visible, .team-card.visible, .testimonial-card.visible, .event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect fix: Only allows hover shifts AFTER the card has faded in */
+.team-card.visible:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+/* ==========================================
+   9. INTERNAL CARD HORIZONTAL SCROLL
+   ========================================== */
+
+/* Restore the main grid layout to normal */
+.teams-container {
+    max-width: 1200px !important;
+    padding: 0 20px !important;
+    overflow: visible !important;
+}
+
+.teams-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    overflow-x: visible !important;
+    padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Enable horizontal scrolling INSIDE the card body */
+.team-body {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch; /* Smooth swiping on mobile devices */
+    padding-bottom: 12px !important; /* Space so the scrollbar doesn't cover content */
+}
+
+/* Force the internal lists/tables to keep their wide shape instead of squeezing */
+.roster-list, 
+.team-body table, 
+.tournament-table {
+    min-width: 450px; /* Adjust this value if your tables need even more room side-to-side */
+    display: block;
+}
+
+/* --- DISCREET INTERNAL SCROLLBAR DESIGN --- */
+
+/* Super slim scrollbar footprint so it looks elegant inside the card */
+.team-body::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Subtle gray background track */
+.team-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+/* Elegant gold/accent scroll handle */
+.team-body::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+/* Firefox compatibility support */
+.team-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) #f1f5f9;
+}
+/* ==========================================
+   10. GLOBAL SITE-WIDE BODY VIDEO BACKGROUND
+   ========================================== */
+
+/* Force body canvas layer transparency to let the video shine through */
+body {
+    background-color: transparent !important;
+}
+
+/* Lock the background video across the entire browser screen viewport */
+.body-bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2; /* Placed at the lowest layer level */
+    pointer-events: none; /* Stops video track from capturing clicks or highlights */
+}
+
+/* Premium frosted tint overlay matching your light theme palette */
+.body-video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 249, 246, 0.90); /* Smoothly tints the video loop to secure contrast */
+    z-index: -1; /* Placed right above the video layer */
+    pointer-events: none;
+}
+
+/* Optional: Make cards look sleek and airy over the moving background */
+.team-card, .testimonial-card, .timeline-content {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(12, 75, 49, 0.6), rgba(17, 17, 17, 0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-lg);
+    animation: scaleIn 0.8s ease-out;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: slideInDown 1s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: slideInUp 1s ease-out 0.4s both;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 14px;
+    animation: slideInUp 1s ease-out 0.6s both;
+    transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent-color);
 }
